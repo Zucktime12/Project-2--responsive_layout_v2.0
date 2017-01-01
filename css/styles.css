@@ -47,22 +47,79 @@ section p {
   max-width: 90%;
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: 500px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+
 
 
 /* Navigation */
+header {
+  padding: 20px 0;
+}
+
+.name {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+
+@media (min-width: 1024px) {
+  .name {
+    display: inline-block;
+  }
+}
 
 ul.nav {
   margin: 0;
   padding: 0;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  ul.nav {
+    text-align: right;
+    display: inline-block;
+    float: right;
+  }
 }
 
 .nav li {
   text-align: center;
   background: #fff;
-  margin: 1% 10%;
-  margin-top: 6px;
-  margin-bottom: 6px;
-  padding: 6px 0;
+  margin: 6px 0;
+}
+
+@media (min-width: 1024px) {
+  .nav li {
+    margin: 0;
+  }
 }
 
 .nav a {
@@ -70,12 +127,8 @@ ul.nav {
   color: steelblue;
   text-transform: uppercase;
   display: block;
-  padding: 10px 15px;
+  padding: 15px;
 }
-
-/*.nav a:visited {
-  color: lightsteelblue;
-}*/
 
 .nav a:hover {
   color: turquoise;
@@ -86,15 +139,14 @@ ul.nav {
 }
 
 
-/* Header and image */
+/* Hero */
 
-header img {
-  max-width: 75%;
-  margin: 5% 12.5%;
+.hero img {
+  width: 100%;
+  margin: 5% auto;
 }
 
-header p {
-  padding: 0 10%;
+.hero p {
   padding-bottom: 2em;
 }
 
@@ -129,7 +181,6 @@ ul#portfolio {
 /* Contact */
 
 .contact-con {
-  /*max-width: 90%;*/
   text-align: center;
 }
 
@@ -145,7 +196,6 @@ ul#portfolio {
   display: inline;
   margin: auto;
   padding-left: 1em;
-  /*margin-left: 1em;*/
 }
 
 .phone {
@@ -193,8 +243,12 @@ ul.skills {
   padding: 20px 40px 40px;
 }
 
+.skillsandcontact {
+  padding: 50px 0 40px 0;
+}
+
 #skills-nav {
-  margin-top: 2.5em;
+  margin-top: 0;
 }
 
 /* Footer */
@@ -219,6 +273,16 @@ footer li {
   border-top: 3px solid #ccc;
 }
 
+.footer-name {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .footer-name {
+    display: inline-block;
+  }
+}
+
 
 a.top-button {
   color: black;
@@ -230,20 +294,38 @@ a.top-button {
   display: none;
 }
 
+.push {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden320 {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  text-align: right;
+  float: right;
+}
+
+.hidden320 a {
+  padding: 0;
+}
+
 /* Media Queries */
 
 @media (min-width: 767px) {
 
-  header p {
+  .hero p {
     margin: 0;
-    padding: 2em;
     font-size: 1.2em;
     line-height: 1.5;
-    padding-top: 4em;
+    width: 50%;
+    display: inline-block;
+    padding: 4em 0 2em 0;
   }
 
-  header img {
-    padding: 2em 2em;
+  .hero img {
+    padding: 2em 0 2em 2em;
     margin: 0;
 
   }
@@ -271,23 +353,17 @@ a.top-button {
   }
 
   #portfolio p {
-    line-height: 1.5
+    line-height: 1.5;
   }
 
   .nav li {
     display: inline-block;
-    padding: .75em 1em;
     background-color: inherit;
     margin: 0;
   }
 
   .nav a {
     color: black;
-  }
-
-  .container {
-    /*margin-left: 20%;*/
-    text-align: center;
   }
 
   .profile-image {
@@ -304,25 +380,14 @@ a.top-button {
     max-width: 60%;
   }
 
-  .clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
   footer {
-    max-width: 95%
-    margin: 0 auto;
-  }
-
-  .main-footer ul {
-    max-width: 90%;
+    max-width: 95%;
     margin: 0 auto;
   }
 
   .footer-nav {
     display: inline-block;
-    /*float: right;*/
+    float: right;
   }
 
   .hidden768 {
@@ -340,18 +405,10 @@ a.top-button {
 
   .push {
     display: inline-block;
-    /*float: left;*/
-    margin-top: 1em;
-    padding-right: 28%;
-    /*position: absolute;*/
   }
-
 }
 
 @media (min-width: 1024px) {
-  body {
-
-  }
 
   #portfolio {
     font-size: 0;
@@ -371,8 +428,4 @@ a.top-button {
 
 .push {
   display: inline-block;
-  /*float: left;*/
-  margin-top: 1em;
-  padding-right: 45%;
-  /*position: absolute;*/
 }

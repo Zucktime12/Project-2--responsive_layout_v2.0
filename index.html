@@ -9,26 +9,31 @@
   <link href="https://fonts.googleapis.com/css?family=Abel|Roboto:300,400,500" rel="stylesheet">
 </head>
   <body>
-    <h1 id="top" class="name">Brandon Zucker</h1>
-    <div class="container">
+    <header>
+      <div class="container clearfix">
+        <h1 id="top" class="name">Brandon Zucker</h1>
         <ul class="nav">
           <li><a href="index.html">Home</a></li>
           <li><a href="#port-nav">Portfolio</a></li>
           <li><a href="#contact-nav">Contact</a></li>
           <li><a href="#skills-nav">Skills</a></li>
         </ul>
-    </div>
-    <div class="contain clearfix">
-      <header>
+      </div>
+    </header>
+
+    <div class="hero clearfix">
+      <div class="container">
         <img src="images/fallvale.jpg" alt="Picture of Brandon Zucker and Arya" class="profile-image">
         <p>Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use!</p>
-      </header>
+      </div>
     </div>
+
+
     <div id="wrapper">
       <main class="clearfix">
         <div>
-        <ul id="portfolio">
           <h2 id="port-nav">Portfolio</h2>
+          <ul id="portfolio">
             <li>
                <a href="images/portfolio-1.png"></a>
                 <img src="images/portfolio-1.png" alt="Marketing Page">
@@ -65,13 +70,14 @@
                 <h3>Calculator</h3>
                 <p>Someone can enter the numbers they want, and press the big blue button and get the result.</p>
             </li>
-        </ul>
+          </ul>
         </div>
       </main>
     </div>
-    <section>
-      <h2 id="skills-nav">Skills</h2>
-        <p class="skill-script">Below are skills I have been learning, practicing, and would like to learn or improve upon.</p>
+    <div class="skillsandcontact">
+      <section>
+        <h2 id="skills-nav">Skills</h2>
+          <p class="skill-script">Below are skills I have been learning, practicing, and would like to learn or improve upon.</p>
           <ul class="skills">
             <li>HTML</li>
             <li>CSS</li>
@@ -79,32 +85,41 @@
             <li>React</li>
             <li>jQuery</li>
           </ul>
-    </section>
-      <section class="contact-con">
-        <h2 id="contact-nav">Contact</h2>
-        <p>If you're interested in chatting or want more inforamtion about what I've been working on, I'd love to hear from you!</p>
-        <ul class="contact-info">
-          <div class="phone">
-            <li>Phone</li>
-            <li><a href="tel:(636)541-1059">(636)541-1059</a></li>
-          </div>
-          <div  class="mail">
-            <li>Email</li>
-            <li><a href="mailto: bwzuck12@gmail.com">bwzuck12@gmail.com</a></li>
-          </div>
-        </ul>
       </section>
-      <footer class="main-footer">
-        <ul>
-          <li class="push">Brandon Zucker</li>
-          <li class="hidden320"><a href="#top" class="top-button">Back to Top</a></li>
-          <div class="footer-nav clearfix">
-            <li class="hidden768"><a href="index.html">Home</a></li>
-            <li class="hidden768"><a href="#portfolio">Portfolio</a></li>
-            <li class="hidden768"><a href="#contact-nav">Contact</a></li>
-            <li class="hidden768"><a href="#skills-nav">Skills</a></li>
+        <section class="contact-con">
+          <h2 id="contact-nav">Contact</h2>
+          <p>If you're interested in chatting or want more inforamtion about what I've been working on, I'd love to hear from you!</p>
+          <div class="contact-info">
+            <div class="phone">
+              <ul>
+                <li>Phone</li>
+                <li><a href="tel:(636)541-1059">(636)541-1059</a></li>
+              </ul>
+            </div>
+            <div class="mail">
+              <ul>
+                <li>Email</li>
+                <li><a href="mailto: bwzuck12@gmail.com">bwzuck12@gmail.com</a></li>
+              </ul>
+            </div>
           </div>
-        </ul>
+        </section>
+      </div>
+      <footer class="main-footer">
+        <div class="container">
+          <ul class="footer-name">
+            <li class="push">Brandon Zucker</li>
+            <li class="hidden320"><a href="#top" class="top-button">Back to Top</a></li>
+          </ul>
+          <div class="footer-nav clearfix">
+              <ul>
+                <li class="hidden768"><a href="index.html">Home</a></li>
+                <li class="hidden768"><a href="#portfolio">Portfolio</a></li>
+                <li class="hidden768"><a href="#contact-nav">Contact</a></li>
+                <li class="hidden768"><a href="#skills-nav">Skills</a></li>
+              </ul>
+          </div>
+        </div>
       </footer>
   </body>
   </html>
